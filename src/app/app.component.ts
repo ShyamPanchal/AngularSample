@@ -9,3 +9,4 @@ export class AppComponent {
   title = 'sample';
   version = 'Angular version 12.2.18';
 }
+``
