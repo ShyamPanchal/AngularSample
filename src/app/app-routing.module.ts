@@ -33,13 +33,22 @@ const routes: Routes = [
         (mod) => mod.SignupModule
       ),
   },
+  {
+    path: 'httpclient',
+    loadChildren: () =>
+      import('./modules/application/items/items.module').then(
+        (mod) => mod.ItemsModule
+      ),
+  },
   { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    initialNavigation: 'enabled'
-})],
+  imports: [
+    RouterModule.forRoot(routes, {
+      initialNavigation: 'enabled',
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

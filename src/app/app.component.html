@@ -1,137 +1,65 @@
-<div class="container py-5">
-  <div class="row">
-    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 text-center mb-2">
-      <h1 class="h5">
-        <i class="fas fa-laptop fa-lg me-2 text-primary"></i>
-        Angular Sample
-        <i class="fas fa-mobile-alt fa-lg ms-2 text-primary"></i>
-      </h1>
-    </div>
-    <div
-      class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 text-center text-danger mb-2"
+<header class="navbar navbar-expand-md navbar-dark fixed-top nga-navbar">
+  <nav class="container" aria-label="Main navigation">
+    <a routerLink="/" class="navbar-brand" alt="Accueil" aria-label="Ganatan">
+      <span class="nga-logo mx-1">Angular Sample</span>
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarCollapse"
+      aria-controls="navbarCollapse"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
     >
-      <h2 class="h5">
-        Angular 12.2.18<i class="fab fa-angular fa-lg ms-2"></i>
-      </h2>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/">
+            <i class="fas fa-home me-1"></i>Home</a
+          >
+        </li>
+      </ul>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/about">
+            <i class="far fa-question-circle me-1"></i>About</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink="/contact">
+            <i class="fas fa-envelope me-1"></i>Contact</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex">
+        <button
+          type="button"
+          class="btn btn-sm nga-btn-navbar me-2"
+          routerLink="/signup"
+        >
+          <i class="fas fa-user-plus me-2"></i>Sign up
+        </button>
+        <button
+          type="button"
+          class="btn btn-sm btn-outline-light me-2"
+          routerLink="/login"
+        >
+          <i class="fas fa-sign-in-alt me-2"></i>Login
+        </button>
+      </form>
     </div>
-    <div
-      class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 text-center text-primary mb-2"
-    >
-      <h2 class="h5">
-        Bootstrap 5.2.1<i class="fab fa-bootstrap fa-lg ms-2"></i>
-      </h2>
-    </div>
-    <div
-      class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3 text-center text-success mb-2"
-    >
-      <h2 class="h5">
-        Font Awesome 6.2.0<i class="fab fa-font-awesome-flag fa-lg ms-2"></i>
-      </h2>
-    </div>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="nga-footer">
+  <div class="py-3 text-center" style="background-color: black">
+    <div class="container"></div>
   </div>
-  <hr />
-  <div class="row mb-2">
-    <div class="col-md-12 text-center mb-4">
-      <h3 class="h5">Features<i class="fas fa-list ms-2"></i></h3>
-    </div>
-  </div>
-  <div class="row pt-2">
-    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2">
-      <div class="nga-card bg-light mb-3">
-        <a routerLink="/bootstrap">
-          <div class="card-header">
-            <div class="row">
-              <div class="col-10 col-xl-10">
-                <h5 class="card-title">Bootstrap</h5>
-              </div>
-              <div class="col-2 col-xl-2">
-                <i class="fab fa-bootstrap fa-lg text-primary"></i>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-text">
-              How to use Buttons, Alerts, Pagination, Tables, Collapses
-            </p>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2">
-      <div class="nga-card bg-light mb-3">
-        <div class="card-header">
-          <div class="row">
-            <div class="col-10 col-xl-10">
-              <h5 class="card-title">Services</h5>
-            </div>
-            <div class="col-2 col-xl-2">
-              <i class="fas fa-handshake fa-lg text-primary"></i>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-            Use services to view a playlist and a youtube player
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2">
-      <div class="nga-card bg-light mb-3">
-        <div class="card-header">
-          <div class="row">
-            <div class="col-10 col-xl-10">
-              <h5 class="card-title">Components</h5>
-            </div>
-            <div class="col-2 col-xl-2">
-              <i class="far fa-clone fa-lg text-primary"></i>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-            Channel component with Input, Output and Event Emitter
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2">
-      <div class="nga-card bg-light mb-3">
-        <div class="card-header">
-          <div class="row">
-            <div class="col-10 col-xl-10">
-              <h5 class="card-title">Reactive Forms</h5>
-            </div>
-            <div class="col-2 col-xl-2">
-              <i class="far fa-file-alt fa-lg text-primary"></i>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-            A model-driven approach to handling form inputs
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-2">
-      <div class="nga-card bg-light mb-3">
-        <div class="card-header">
-          <div class="row">
-            <div class="col-10 col-xl-10">
-              <h5 class="card-title">Template Driven Forms</h5>
-            </div>
-            <div class="col-2 col-xl-2">
-              <i class="far fa-file-alt fa-lg text-primary"></i>
-            </div>
-          </div>
-        </div>
-        <div class="card-body">
-          <p class="card-text">
-            Forms are the mainstay of business applications
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+</footer>
