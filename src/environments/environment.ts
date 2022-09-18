@@ -3,7 +3,13 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  application: {
+    name: 'Angular Sample',
+    angular: 'Angular 12.2.18',
+    bootstrap: 'Bootstrap 5.2.1',
+    fontawesome: 'Font Awesome 6.2.0',
+  },
 };
 
 /*
